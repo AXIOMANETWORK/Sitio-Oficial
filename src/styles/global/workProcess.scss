@@ -1,0 +1,65 @@
+.workProcess{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+    h3{
+        padding: 1rem;
+    }
+
+    p{
+        padding: 0.5rem;
+    }
+
+    .process{
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        div{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                padding: 1rem;
+            .circle {
+                background: #ffff;
+                border: 0.1875em ;
+                border-radius: 50%;
+                box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                -webkit-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                -moz-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                height: 5em;
+                width: 5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem;
+                h5{
+                    text-align: center;
+                    font-size: 30px;
+                }
+              }
+              h4{
+                  padding: 1rem;
+              }
+              p{
+                  text-align:center;
+                  padding: 1rem;
+              }
+
+        }
+    }
+}
+
+@include breakpoint('medium') {
+    .workProcess{
+        
+    .process{
+        flex-direction: row;    
+    }
+    }
+        
+}
+

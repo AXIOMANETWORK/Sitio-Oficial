@@ -1,0 +1,118 @@
+.services{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 5rem;
+    width: 100%;
+    h3{text-align: center;}
+    .text-bold{text-align: center;}
+    .icon-services{
+        display: flex;
+        flex-direction: column;
+        div{
+            .icon{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .services{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    
+                    .icon-services{
+                        display: flex;
+                        div{
+                            .icon{
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    padding: 8rem;
+                                }
+                                .info-icon{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    width: 250px;
+                                }
+                            }
+                        }
+                    }
+                  }
+               
+            }
+        }
+    }
+  }
+
+
+  /*Tablets*/
+@include breakpoint(medium) {
+    .services{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        .icon-services{
+            display: flex;
+            
+            div{
+                .icon{
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem;
+                    .info-icon{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        width: 250px;
+                        height: 150px;
+                        h4{
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+      }
+}
+/*Desktop*/
+@include breakpoint(medium-tablet) {
+    .services{
+        .icon-services{
+            flex-direction: row;
+            justify-content: flex-start;
+            div{
+                .icon{
+                    flex-direction: row;
+                    .info-icon{
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@include breakpoint(medium-high) {
+    .services{
+        
+        .icon-services{
+            flex-direction: row;
+            div{
+                .icon{
+                    flex-direction: row;
+                    .info-icon{
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
