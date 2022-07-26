@@ -1,0 +1,48 @@
+nav{
+        padding: 1rem;
+    ul{
+        display: none;
+    }
+    .menu{
+        
+        img{
+            width: 30px;
+        }
+    }
+}
+
+@include breakpoint('medium') {
+    nav{
+        width: 500px;
+        ul{
+            display: flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            width: 100%;
+            li{
+                text-decoration: none;
+                list-style-type: none;
+                
+                a{
+                    text-decoration: none;
+                    color: #ffff;
+                    cursor: pointer;
+                }
+            }
+        }
+        .menu{
+            display: none;
+            img{
+                
+            }
+        }
+
+    }
+}
+
+
+@include breakpoint('medium-tablet') {
+    nav{
+        width: 500px;
+    }
+}

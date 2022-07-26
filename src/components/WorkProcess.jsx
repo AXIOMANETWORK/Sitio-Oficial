@@ -8,20 +8,20 @@ const WorkProcess = () => {
         <div className='process'>
             <div>
                 <div className='circle'><h5>01</h5></div>
-                <h4>Plan</h4>
-                <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+                <h4>Diagnóstico</h4>
+                <p>Buscamos entender tu visión y necesidades hacerlas nuestras.</p>
             </div>
 
             <div>
                 <div className='circle'><h5>02</h5></div>
-                <h4>Design</h4>
-                <p>We had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+                <h4>Diseño</h4>
+                <p>Trabajamos contigo para diseñar una solución pensada en ti y tus usuarios.</p>
             </div>
 
             <div>
                 <div className='circle'><h5>03</h5></div>
-                <h4>Develop</h4>
-                <p>Had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+                <h4>Desarrollo</h4>
+                <p>Desarrollamos tu sistema siguiendo metodologias ágiles de desarrollo de software.</p>
             </div>
         </div>
     </div>

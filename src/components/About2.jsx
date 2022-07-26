@@ -3,7 +3,7 @@ import Phone from '../media/phone.png';
 import { useState } from 'react';
 import Flecha from '../media/flecha.png'
 const About2 = () => {
-      const [servicio,setServicio] = useState('');
+      const [servicio,setServicio] = useState('uno');
       
       const accordion = (e)=>{
             setServicio(e);
@@ -14,21 +14,21 @@ const About2 = () => {
       <section className='about'>
           <div className='about-text'>
               <h3>ABOUT</h3>
-              <p className='text-bold'>24/7 Support</p>
+              <p className='text-bold'>Métodos de trabajo</p>
               <div>
                 <div className='info-service'>
-                  <div><a  onClick={()=>{accordion('uno')}}><h4>Advisory Team</h4><span><img className={servicio === 'uno'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
-                  <p className={`text-content ${servicio === 'uno' ? 'mostrar' : 'hiden'}`}>We know the singularities of each economic sector where we design, propose, manage and execute projects, always respecting the agreed times and with the highest quality. Our goal is to create added value.</p>
+                  <div><a   onClick={()=>{accordion('uno')}}><h4>Trabajo en equipo</h4><span><img className={servicio === 'uno'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
+                  <p className={`text-content ${servicio === 'uno' ? 'mostrar' : 'hiden'}`}>Contamos con un equipo preparado para desarrollar tus ideas</p>
                 </div>
 
                 <div className='info-service'>
-                  <div><a onClick={()=>{accordion('dos')}}><h4>Consulting Services</h4><span><img className={servicio === 'dos'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
-                  <p className={`text-content ${servicio === 'dos' ? 'mostrar' : 'hiden'}`}>We know the singularities of each economic sector where we design, propose, manage and execute projects, always respecting the agreed times and with the highest quality. Our goal is to create added value.</p>
+                  <div><a  onClick={()=>{accordion('dos')}}><h4>Colaboración y Comunicación</h4><span><img className={servicio === 'dos'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
+                  <p className={`text-content ${servicio === 'dos' ? 'mostrar' : 'hiden'}`}>Trabajamos con organización y con constante comunicación para entregar el producto que necesitas</p>
                 </div>
 
                 <div className='info-service'>
-                  <div><a onClick={()=>{accordion('tres')}}><h4>Help Center</h4><span><img className={servicio === 'tres'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
-                  <p className={`text-content ${servicio === 'tres' ? 'mostrar' : 'hiden'}`}>We know the singularities of each economic sector where we design, propose, manage and execute projects, always respecting the agreed times and with the highest quality. Our goal is to create added value.</p>
+                  <div><a  onClick={()=>{accordion('tres')}}><h4>Optimización de flujo</h4><span><img className={servicio === 'tres'? 'rotate' : ''} src={Flecha} alt="" /></span></a></div>
+                  <p className={`text-content ${servicio === 'tres' ? 'mostrar' : 'hiden'}`}>Somos óptimos, nuestro trabajo se basa en resultados y nuestro seguimiento es continuo</p>
                 </div>
               </div>
           </div>

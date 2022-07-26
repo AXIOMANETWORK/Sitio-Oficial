@@ -25,6 +25,10 @@
             justify-content: center;
             align-items: center;
             padding: 1rem;
+            &:hover{
+                width: 6rem;
+                height: 6rem;
+            }
             img{
                 max-width: 100%;
             }
@@ -73,7 +77,7 @@
           
             
             .icono{
-            
+                
                 img{
                     
                 }

@@ -1,129 +1,342 @@
-.about{
+.About{
+    width: 100%;
     height: auto;
-    padding: 1rem;
-    padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    .about-img{
-        width: 100%;
-        padding: 0.5rem;
-        img{
-            max-width: 100%;
-        }
-    }
-    .about-text{
-        width: 100%;
-        height: 450px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 1rem;
-        .text-bold{
-            font-size: 20px;
-        }
-        .text-content{
-            font-size: 14px;
-        }
-        .info-service{
-            div{
-              
-                a{
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    padding: 0.5rem;
-                    .rotate{
-                        transform:rotate(90deg);
-                    }
-                }
+        .SectionAboutOne {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            & .SectionAboutOne-h3 {
+                color:$color8;
+                font-weight: 100;
+                padding: 0.5rem;
+                margin-top: 3rem;
+                font-size: 16px;
             }
-            .hiden{
-                height: 0;
-                opacity: 0;
-                visibility: hidden;
-            }
-            .mostrar{
-                transition: all 0.3s ease-in-out;
-                padding-bottom: 1rem;
-            }
-        }
-    }
-    .about-burbujas{
-        position: absolute;
-        z-index: 0;
-        bottom: -850px;
-        left: 215px;
-        img{overflow:hidden;}
-        display: none;
-    }
-  
-}
 
-/*Tablets*/
-@include breakpoint(medium) {
-    .about{
-       flex-direction: row;
-        .about-text{
+            & .SectionAboutOne-info--one,.SectionAboutOne-info--two{
+                padding: 0.5rem;
+            }
+
+            & .SectionAboutOne-h4 {
+                margin-bottom: 1rem;
+                font-size: 32px;
+                font-weight: bolder;
+                
+            }
+
+            & .SectionAboutOne-p {
+                margin-bottom: 1rem;
+                font-size: 20px;
+            }
+            ul {
+                padding-left: 1.5rem;
+            }
+        }
+
+        .History {
+            width: 100%;
+            background-color: $color7;
+            color: $color-withe;
+            height: auto;
+            margin-bottom: 3rem;
+            text-align: left;
+            .HistoryOne {
+                border: 1px solid #ffff;
+                padding: 1rem;
+                
+                .HistoryOne-h3 {
+                    color: $color9;
+                    font-weight: 100;
+                    font-size: 16px;
+                    margin-bottom: 2rem;
+                }
+                .HistoryOne-h4 {
+                    font-size: 40px;
+                    margin-bottom: 2rem;
+                }
+                .HistoryOne-p {
+                    font-size: 20px;
+                    margin-bottom: 2rem;
+                }   
+            }
+
+            .Historytwo {
+                border: 1px solid #ffff;
+                padding: 1rem;
+
+                .Historytwo-h4 {font-size: 40px;
+                    margin-bottom: 2rem;}
+                .Historytwo-p {    font-size: 20px;
+                    margin-bottom: 2rem;}
+            }
             
         }
-    }
-    .about-text{
-        .info-service{
-            div{
-               
-                a{
-                   
-                    .rotate{
+
+        .OurTeam {
+            width: 100%;
+            color: $color-withe;
+            height: auto;
+            text-align: left;
+            background-color: $color7;
+            padding: 1rem;
+            .OurTeam-title {
+                width: 100%;
+                .OurTeam-h3 {
+                    color: $color9;
+                    font-weight: 100;
+                    font-size: 16px;
+                    margin-bottom: 2rem;
+                }
+                .OurTeam-h4 {
+                    font-size: 32px;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .OurTeam-Cards {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                
+                .container-cards {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    transition: all 0.3s ease-in-out;
+                    .card {
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        width: 100%;
+                        img {
+                            border: 1px solid rgb(58, 60, 86);
+                            margin-bottom: 1rem;
+                            width: 100%;
+                        }
+                        .card-info {
+                            margin-bottom: 1rem;
+                            h3 {
+                                margin-bottom: 0.5rem;
+                            }
+                            h5 {
+                            }
+                        }
                         
                     }
                 }
+
+                .isActiveCard {
+                    transform: translate(-290px);
+                }
+                
+                .control-cards {
+                    width: 100%;
+                    display: flex;
+                    justify-content:space-evenly;
+                    margin-bottom: 3rem;
+                    .control{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 1px solid $color9;
+                    }
+                    .isActive {
+                        background-color:$color9;
+                    }
+                } 
             }
-            .hiden{
-               
-            }
-            .mostrar{
-               
-            }
+
         }
-          
-    }
-}
-/*Desktop*/
-@include breakpoint(high) {
-    .about{
-        padding: 5rem;
-        display: flex;
-        justify-content: space-around;
-        .about-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-    }
-    .about-text{
-        .info-service{
-            div{
-                display: flex;
-                align-items: center;
-                a{
-                    cursor: pointer;
-                    padding: 0.5rem;
-                    .rotate{
-                        transform:rotate(90deg);
+
+        .testimonials{
+            width: 100%;
+            background-color: $color7;
+            color: $color-withe;
+            height: auto;
+            padding: 1rem;
+                .testimonials-title{
+                    text-align: center;
+                    .testimonials-h3{
+                        color: $color9;
+                        font-weight: 100;
+                        font-size: 16px;
+                        margin-bottom: 1rem;
+                    }
+                    .testimonials-h4{
+                        font-size: 32px;
+                        margin-bottom: 2rem;
                     }
                 }
+
+                .testimonials-container{
+                    background-color: #ffff;
+                    color: #000;
+                    width: 100%;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    .testimonials-stars{
+                        width: 100%;
+                        height: 3px;
+                        margin-bottom: 1rem;
+                        padding: 1rem;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    .testimonials-text{
+                        padding: 1rem;
+                    }
+                    .testimonials-item{
+                        display: flex;
+                        justify-content:flex-start;
+                        align-items: center;
+                        padding: 1rem;
+                    }
+                    .testimonials-img{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        background-image:url('../../media/person2.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .testimonials-name{
+                        margin-left: 1rem;
+                        h5{
+                            margin-bottom: 0.8rem;
+                            font-size: 14px;
+                        }
+                        h6{
+                            font-size: 12px;
+                            font-weight: 200;
+                        }
+                    }
+                }
+
+                .testimonials-controls{
+                    width: 100%;
+                    display: flex;
+                    justify-content:space-evenly;
+                    margin-bottom: 3rem;
+                    .control{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 1px solid $color9;
+                    } 
+                    .isActive{
+                        background-color:$color9;
+                    }
+                }
+
+        }
+
+        .questions{
+            width: 100%;
+            background-color: $color7;
+            color: $color-withe;
+            height: auto;
+            padding: 1rem;
+            .questions-title{
+                .questions-h3{
+                        color: $color9;
+                        font-weight: 100;
+                        font-size: 16px;
+                        margin-bottom: 1rem;
+                }
+                .questions-h4{
+                    font-size: 32px;
+                    margin-bottom: 2rem;
+                }
             }
-            .hiden{
-                height: 0;
-                opacity: 0;
-                visibility: hidden;
+            
+            .questions-acordeon{
+                width: 100%;
+                margin-bottom: 3rem;
+                .questions-item{
+                    width: 100%;
+                    .questions-itemTitle{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1rem;
+                        background-color: $color7;
+                        color: #fff;
+                        h5{
+                            font-size: 18px;
+                        }
+                        .arrow{
+                            width: 25px;
+                            transform:rotate(180deg);
+                            img{
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                    .questions-itemContainer{
+                        background-color: #ffff;
+                        padding: 1rem;
+                        height: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        p{
+                            color: #000;
+                        }
+                    }
+                }
+
+                .question-isActive{
+                    
+                    .questions-itemTitle{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1rem;
+                        background-color: #ffff;
+                        color: #000;
+                        transition: all 0.3s ease-in-out;
+                        h5{
+                            font-size: 18px;
+                        }
+                        .arrow{
+                            width: 25px;
+                            img{
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+                    .questions-itemContainer{
+                        background-color: #ffff;
+                        padding: 1rem;
+                        transition: all 0.3s ease-in-out;
+                        p{
+                            color: #000;
+                        }
+                    }
+
+                }
             }
-            .mostrar{
-                transition: all 0.3s ease-in-out;
-                padding-bottom: 1rem;
+
+        }
+
+        .partners{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            background-color: $color7;
+            color: $color-withe;
+            height: auto;
+            padding: 1rem;
+            .partners-logo{
+                width: 50%;
+                padding: 1rem;
+                img{
+                    max-width: 100%;
+                }
             }
         }
-          
-    }
 }

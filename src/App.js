@@ -1,32 +1,30 @@
-import About from "./components/About";
-import About2 from "./components/About2";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Iconos from "./components/Iconos";
-import OurWork from "./components/OurWork";
-import Rectangles from "./components/Rectangles";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
-import TransforNow from "./components/TransforNow";
-import WorkProcess from "./components/WorkProcess";
+import ScrollToUp from "./components/ScrollToUp";
+import About from "./routes/About";
+import Contact from "./routes/Contact";
+import Home from "./routes/Home";
+import Portafolio from "./routes/Portafolio";
+import Services from "./routes/Services";
+import WorkMedia from "./routes/WorkMedia";
 
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <div className="container">
-          <About/>
-          <Services/>
-          <About2/>
-          <OurWork/>
-          <WorkProcess/>
-          <Iconos/>
-          <Testimonials/>
-          <Rectangles/>
-        </div>
-        <TransforNow/>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path="about" element={ <About/> }/>
+          <Route path="portafolio" element={ <Portafolio/> }/>
+          <Route path="services" element={ <Services/> }/>
+          <Route path="workMedia" element={ <WorkMedia/> }/>
+          <Route path="contact" element={ <Contact/> }/>
+          <Route path="/" element={ <Home/> } exact />
+        </Routes>
+      </BrowserRouter>
         <Footer/>
+        <ScrollToUp/>
     </div>
   );
 }

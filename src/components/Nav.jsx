@@ -3,10 +3,10 @@ import Menu from '../media/menu.png'
 function Nav() {
   return (
     <>
-        <nav>
+        <nav className='Slider-nav'>
             <ul>
                 <li><a href="">About</a></li>
-                <li><a href="">Pricing</a></li>
+                <li><a href="">Services</a></li>
                 <li><a href="">Portafolio</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Contact</a></li>

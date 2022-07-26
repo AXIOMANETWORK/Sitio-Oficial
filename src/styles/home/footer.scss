@@ -1,0 +1,36 @@
+.Footer{
+    width: 100%;
+}
+.Footer-logos{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.Footer-logo{
+    display: flex;
+    width: 300px;
+    img{
+        width: 100%;
+    }
+}
+.Footer-iconSocial{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.Footer-text{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    div{
+        margin: 20px 0;
+    }
+}
