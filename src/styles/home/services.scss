@@ -1,120 +1,58 @@
-.services{
+.Services{
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    padding-top: 5rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+.Services-iconos{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    h3{text-align: center;}
-    .text-bold{text-align: center;}
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+.Services-icon{
+    width: 300px;
+    img{
+        width: 200px;
+    }
+}
+
+.Services-infoIcon{
+    margin:  25px 0;
+}
+
+
+@include breakpoint('medium-simple') {
    
-    .icon-services{
-        display: flex;
-        flex-direction: column;
-        div{
-            .icon{
-                display: flex;
-                flex-direction: column; 
-                align-items: center;
-                .services{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    
-                    .icon-services{
-                        display: flex;
-                        div{
-                            .icon{
-                                display: flex;
-                                align-items: center;
-                                img{
-                                    padding: 8rem;
-                                    
-                                }
-                                .info-icon{
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-start;
-                                    width: 250px;
-                                }
-                            }
-                        }
-                    }
-                  }
-               
-            }
+    
+    .Services-icon{
+        width: 200px;
+        img{
+            width: 200px;
         }
     }
-  }
-
-
-  /*Tablets*/
-@include breakpoint(medium) {
-    .services{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+    
+}
+@include breakpoint('medium') {}
+@include breakpoint('medium-tablet') {}
+@include breakpoint('medium-high') {
+ 
+    .Services-iconos{
         
-        .icon-services{
-            display: flex;
-            
-            div{
-                .icon{
-                    display: flex;
-                    align-items: center;
-                    padding: 1rem;
-                    .info-icon{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        width: 250px;
-                        height: 150px;
-                        h4{
-                            padding-bottom: 1rem;
-                        }
-                    }
-                }
-            }
-        }
-      }
-}
-/*Desktop*/
-@include breakpoint(medium-tablet) {
-    .services{
-        .icon-services{
-            flex-direction: row;
-            justify-content: flex-start;
-            div{
-                .icon{
-                    flex-direction: row;
-                    .info-icon{
-                        width: 100%;
-                    }
-                }
-            }
-            
-        }
     }
-}
 
-@include breakpoint(medium-high) {
-    .services{
-        
-        .icon-services{
-            flex-direction: row;
-            div{
-                .icon{
-                    flex-direction: row;
-                    .info-icon{
-                        
-                        
-                    }
-                }
-            }
+    .Services-icon{
+        width: 300px;
+        img{
+            width: 250px;
         }
     }
 }
+@include breakpoint('large') {}
+@include breakpoint('xlarge') {}
+@include breakpoint('homepage-max') {}

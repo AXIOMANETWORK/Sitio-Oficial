@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1rem;
     padding-top: 5rem;
+    width: 100%;
     div{
         display: flex;
         flex-direction: column;
@@ -19,15 +20,14 @@
             box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
             -webkit-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
             -moz-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
-            height: 5em;
-            width: 5em;
+            height:100px;
+            width: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1rem;
+            padding: 1.5rem;
             &:hover{
-                width: 6rem;
-                height: 6rem;
+                padding: 1rem;
             }
             img{
                 max-width: 100%;
@@ -36,6 +36,7 @@
 
         h4{
             padding-top: 1.5rem;
+            font-size: 30px;
         }
         p{
             

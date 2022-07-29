@@ -1,9 +1,9 @@
-import React, { useState,useRef } from 'react'
+import React, { useState,useRef } from 'react';
 //import customers from '../media/customers.png'
-import person from '../media/person2.png'
+import person from '../media/person2.png';
 //import cuadricula from '../media/cuadricula.png'
-import datos from '../api/testimonials.json'
-
+import datos from '../api/testimonials.json';
+import oval from '../media/OvalBig.png';
 
 const Testimonials = () => {
   const slideContainer = useRef(null);
@@ -28,23 +28,23 @@ const Testimonials = () => {
 
 
   return (
-    <div className='testimonials'>
+    <div className='Testimonials'>
 
-        <div className='tile-testimonials'>
+        <div className='Testimonials-title'>
           <h3>Testimonials</h3>
           <p className='text-bold'>What Our Customers Say</p>
           <a className='btn-dark'>Contac us</a>
         </div>
 
-        <div className='cards-testimonials'>
-          <div className="content-cards" ref={slideContainer}>
+        <div className='Testimonials-cards'>
+          <div className="Testimonials-card" ref={slideContainer}>
               {
                 datos.map(
                   item => {
                     return (
-                    <div className="card-info" key={item.id} >
+                    <div className="Testimonials-cardInfo" key={item.id} >
                     
-                      <div className='card-img' style={{backgroundImage:`url(${person})`}}></div>
+                      <div className='Testimonials-cardImg' style={{backgroundImage:`url(${person})`}}></div>
                       <div>
                         <h4>{item.name}</h4>
                         <p>{item.company}</p>
@@ -57,20 +57,20 @@ const Testimonials = () => {
                 )
               }
           </div>
-          <div className='cards-controls'>
+          <div className='Testimonials-cardsControls'>
             
             {
               datos.map(
                 item =>{
                   return(
-                    <div onClick={() => carrusell(item.id)} className={item.id === idActive ? 'active' : ''} key={item.id} ></div>
+                    <div onClick={() => carrusell(item.id)} className={item.id === idActive ? 'Testimonials-isActive' : ''} key={item.id} ></div>
                   )
                 }
               )
             }
           </div>
         </div>  
-      
+        <div className="Testimonials-oval"> <img src={oval} alt="" /> </div>
     </div>
   )
 

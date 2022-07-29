@@ -1,6 +1,6 @@
 import React from 'react'
-import GrupoImg from '../media/Grupo2.png'
-import Burbujas1 from '../media/burbujas1.png'
+import GrupoImg from '../media/Grupo2.png';
+
 const About = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const About = () => {
               <p className='text-content'>We know the singularities of each economic sector where we design, propose, manage and execute projects, always respecting the agreed times and with the highest quality. Our goal is to create added value.</p>
               <a className='btn-dark'>Learn more</a>
           </div>
-          <div className='about-burbujas'><img src={Burbujas1} alt="" /></div>
+          
       </section>
     </>
   )

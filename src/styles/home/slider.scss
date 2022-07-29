@@ -14,7 +14,7 @@
         justify-content: space-between;
     }
     &-logo{
-        background-image: url('../../media/newLogo.png');
+        background-image: url('../../media/Isotipo.png');
         background-repeat: no-repeat;
         width: 90px;
         height: 90px;
@@ -23,7 +23,7 @@
     &-slide{
         width: 100%;
     }
-    &-texto{}
+    
     &-flechaHeader{
         position: absolute;
         left: 20px;
@@ -43,6 +43,24 @@
             width: 420px;
         }
     }
+
+    &-social{
+        display: flex;
+        position: absolute;
+        right:0px;
+        bottom:0px;
+        z-index: 3;
+    }
+    
+
+    &-iconSocial{
+        width: 40px;
+        margin: 3px;
+        img{
+            width: 100%;
+        }
+    }
+
     &-figura{
         position: absolute;
         top: 0;
@@ -104,7 +122,13 @@
 
 @include breakpoint('medium') {
     .Slider{
-      
+        &-logo{
+            background-image: url('../../media/newLogo.png');
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 90px;
+            background-size: contain;
+        }
         &-texto{
             height: 300px;
         }
@@ -198,12 +222,24 @@
 
 @include breakpoint('xlarge') {
     .Slider{
+        
+        &-logo{
+            width: 200px;
+        }
       
         &-texto{
             width: 50%;
             height: 400px;
             padding: 2rem;
         }
+
+        .Slider-h3 {
+            font-size: 40px;
+        }
+        .Slider-p {
+            font-size: 20px;
+        }
+
         &-flechaHeader{
             top: 600px;
         }
@@ -227,6 +263,18 @@
             height: 400px;
             padding: 2rem;
         }
+
+        .Slider-h3 {
+            font-size: 50px;
+        }
+        .Slider-pTitle{
+            font-size: 80px;
+        }
+
+        .Slider-p {
+            font-size: 25px;
+        }
+
         &-flechaHeader{
             top: 600px;
         }
@@ -241,439 +289,3 @@
         }
     }
 }
-
-/*.Slider{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(245, 241, 241);
-    background-repeat: no-repeat;
-    overflow:hidden;
-    background-image: url('../../media/Rectangle.png');
-    background-position: 50px;
-    background-position-x: 250px;
-    background-position-y: 0px;
-.navegacion{
-    width: 90%;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    z-index: 100;
-    .logo{
-        background-image: url('../../media/Isotipo.png');
-        background-repeat: no-repeat;
-        width: 90px;
-        height: 90px;
-        background-size: contain;
-    }
-    img{
-        width: 50px;
-    }
-    nav{
-        
-        ul{
-            display: none;
-        }
-        .menu{
-            
-            img{
-                width: 30px;
-            }
-        }
-
-    }
-}
-.slide{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 100;
-    .texto{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 500px;
-        padding: 0.5rem;
-    }
-    .img-slide{ 
-        transform: scaleX(-1);
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-        img{
-            width: 410px;
-            max-height: auto;
-            position: absolute;
-            z-index: 1;
-            top: 0px;
-            right: -10px;
-            
-        }
-    }
-}
-
-.figura{
-    position: absolute;
-    z-index: 0;
-    top: -50px;
-    left: 215px;
-    display: none;
-}
-.cuadricula{
-    position: absolute;
-    z-index: 0;
-    bottom: 100px;
-    left: 100px;
-    img{
-        width: 200px;
-    }
-}
-.flecha-header{
-    position: absolute;
-    z-index: 0;
-    bottom: 220px;
-    left: 10px;
-    cursor: pointer;
-    img{
-        width: 70px;
-    }
-}
-
-}
-@include breakpoint('medium') {
-    .Slider{
-          
-    .navegacion{
-       
-        
-        img{
-           
-        }
-        nav{
-            width: 50%;
-            ul{
-                display: flex;
-                justify-content:space-between;
-                width: 100%;
-                li{
-                    text-decoration: none;
-                    list-style-type: none;
-                    
-                    a{
-                        text-decoration: none;
-                        color: #ffff;
-                        cursor: pointer;
-                    }
-                }
-            }
-            .menu{
-                display: none;
-                img{
-                    
-                }
-            }
-    
-        }
-    }
-    .slide{
-        align-items: flex-start;
-        
-        .texto{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 900px;
-            padding: 0.5rem;
-        }
-        .img-slide{ 
-            transform: scaleX(-1);
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-            img{
-                width: 650px;
-                z-index: 1;
-                top: -305px;
-                right: 200px;
-                
-            }
-        }
-    }
-    
-    .figura{
-     
-    }
-    .cuadricula{
-       
-        bottom: 220px;
-        left: 360px;
-        img{
-           
-        }
-    }
-    .flecha-header{
-        bottom: 90px;
-        img{
-            
-        }
-    }
-    
-    }
-}
-
-
-@include breakpoint('medium-high') {
-    .Slider{
-        background-position: 50px;
-        background-position-x: 500px;
-        background-position-y: -100px;
-        .navegacion{
-           
-            .logo{
-                width: 400px;
-                background-image: url('../../media/Artboard-1.png');
-               
-            }
-            img{
-               
-            }
-            nav{
-                width: 40%;
-                ul{
-                    
-                    li{
-                    
-                        a{
-                         
-                        }
-                    }
-                }
-                .menu{
-                   
-                    img{
-                        
-                    }
-                }
-        
-            }
-        }
-        .slide{
-           
-            
-            .texto{
-        
-            }
-            .img-slide{ 
-                transform: scaleX(-1);
-                width: 100%;
-                height: 100%;
-                overflow: visible;
-                img{
-                    top: -300px;
-                    right: 450px;
-                    width: 600px;
-                }
-            }
-        }
-        
-        .figura{
-         
-        }
-        .cuadricula{
-            bottom: 220px;
-            left: 500px;
-            img{
-               
-            }
-        }
-        .flecha-header{
-            left: 80px;
-            img{
-                
-            }
-        }
-        
-        }
-}
-
-@include breakpoint('large') {
-    .Slider{
-        background-position: 50px;
-        background-position-x: 700px;
-        background-position-y: -100px;
-        .navegacion{
-           
-            
-            img{
-               
-            }
-            nav{
-                width: 35%;
-                
-                ul{
-                    
-                    li{
-                    
-                        a{
-                         
-                        }
-                    }
-                }
-                .menu{
-                   
-                    img{
-                        
-                    }
-                }
-        
-            }
-        }
-        .slide{
-           
-            
-            .texto{
-                font-size: 40px;
-                .text-bold{
-                    width: 100%;
-                    font-size: 80px;
-                }
-                .text-content{
-                    font-size: 22px;
-                }
-            }
-            .img-slide{ 
-                transform: scaleX(-1);
-                width: 100%;
-                height: 100%;
-                overflow: visible;
-                img{
-                    width: 700px;
-                    top: -280px;
-                    right: 580px;
-                    
-                }
-            }
-        }
-        
-        .figura{
-         
-        }
-        .cuadricula{
-            bottom: 220px;
-            left: 600px;
-            img{
-               
-            }
-        }
-        .flecha-header{
-            left: 80px;
-            img{
-                
-            }
-        }
-        
-        }
-}
-
-@include breakpoint('xlarge') {
-    .Slider{
-        background-position: 50px;
-        background-position-x: 700px;
-        background-position-y: -100px;
-        .cuadricula{
-            position: absolute;
-            z-index: 0;
-            bottom: 100px;
-            left: 800px;
-            img{
-                width: 400px;
-            }
-        }
-    }
-}
-
-
-@include breakpoint('homepage-max') {
-    .Slider{
-        background-position: 50px;
-        background-position-x: 1100px;
-        background-position-y: -100px;
-        .navegacion{
-          
-            
-            img{
-                
-            }
-            nav{
-                width: 35%;
-                ul{
-            
-                }
-                .menu{
-                    
-                    img{
-                        
-                    }
-                }
-        
-            }
-        }
-        .slide{
-         
-            .texto{
-            
-            }
-            .img-slide{ 
-                transform: scaleX(-1);
-                width: 100%;
-                height: 100%;
-                overflow: visible;
-                img{
-                    width: 800px;
-                    top: -380px;
-                    right: 800px;
-                    
-                }
-            }
-        }
-        
-        .figura{
-            position: absolute;
-            z-index: 0;
-            top: -50px;
-            left: 215px;
-            display: none;
-        }
-        .cuadricula{
-            position: absolute;
-            z-index: 0;
-            bottom: 100px;
-            left: 800px;
-            img{
-                width: 400px;
-            }
-        }
-        .flecha-header{
-            position: absolute;
-            z-index: 0;
-            bottom: 220px;
-            left: 300px;
-            img{
-                width: 100px;
-            }
-        }
-        
-        }
-       
-    }
-*/

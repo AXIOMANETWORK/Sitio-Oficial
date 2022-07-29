@@ -1,32 +1,32 @@
-.testimonials{
+.Testimonials {
     width: 100%;
+    max-width: 1500px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 1rem;
-    .tile-testimonials{
+    position: relative;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+    
+.Testimonials-title {
         width: 100%;
-        height: 200px;
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
         align-items: flex-start;
-        .img-customers{
-            img{
-                max-width: 100%;
-            }
-        }
     }
      
-  .cards-testimonials{
+.Testimonials-cards {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       width: 320px;
       overflow: hidden;
-      .content-cards{
+    }
+      
+.Testimonials-card {
             display: flex;
             flex-wrap: nowrap;
             width: 300px;
@@ -34,7 +34,9 @@
             padding-top: 1rem;
             gap: 30px;
             transition: all 0.3s ease-in-out;
-            .card-info{
+        }
+            
+.Testimonials-cardInfo {
                     /*transform: translate(-244px); 0 244 488 px*/
                     width: 100%;
                     background-color:rgb(185, 185, 185);
@@ -50,7 +52,9 @@
                     box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.19);
                     padding:2rem;
                     height: 450px;
-                    .card-img{
+                }
+                
+.Testimonials-cardImg {
                         border: 10px solid  rgb(241, 240, 240);
                         border-radius: 10px;
                         width: 140px;
@@ -60,14 +64,11 @@
                         img{
                             max-width: 100%;
                         }
-                    }
-                }
-         }
-        .hiden-card{
-           display: none;
-          }  
-        .cards-controls{
-            
+            }
+                
+         
+        
+    .Testimonials-cardsControls { 
             width: 100px;
             height: 20px;
             display: flex;
@@ -79,31 +80,89 @@
                 border-radius: 50%;
                 background-color: rgb(199, 196, 196);
             }
-            .active{
-                border: 2px solid #000;
-            }
+           
         }
+
+        .Testimonials-isActive {
+            border: 2px solid #000;
+        }
+  
+  .Testimonials-oval{
+    position:absolute;
+    z-index: -2;
+    bottom: -10px;
+    width: 250px;
+    img{
+        max-width: 100%;
+    }
   }
 
+
+
+
+@include breakpoint('medium-simple') {
+            
+    .Testimonials-title {
+        width: 100%;
+        gap: 10px;
+    }
+      
+        .Testimonials-oval {
+            bottom: 10px;
+            right: 120px;
+            width: 400px;
+          }
+    
+    
 }
 
 /*Tablets*/
 @include breakpoint(medium) {
-    .testimonials{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        height: 100vh;
-        .tile-testimonials{
-            width: 50%;
-            height: 450px;
-            padding: 2rem;
-            p{
-                width: 400px;
-            }
+
+        .Testimonials-title {
+            width: 100%;
+            gap: 10px;
         }
-        .cards-testimonials{
-            
-        }
-    }
+
+        .Testimonials-oval {
+            right: 185px;
+          }
+    
+    
+
 }
+
+@include breakpoint('medium-tablet') {
+
+    .Testimonials-oval {
+        bottom: 0px;
+        right: 240px;
+        width: 400px;
+      }
+    
+}
+@include breakpoint('medium-high') {
+
+    .Testimonials-title {
+        width: 400px;
+        gap: 10px;
+    }
+    
+    .Testimonials-oval {
+        right: 50px;
+      }
+    
+    
+}
+@include breakpoint('large') {
+    .Testimonials-oval {
+        right: 130px;
+      }
+}
+
+@include breakpoint('xlarge') {
+    .Testimonials-oval {
+        right: 150px;
+      }
+}
+@include breakpoint('homepage-max') {}
