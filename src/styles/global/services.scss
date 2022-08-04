@@ -1,0 +1,51 @@
+.Services{
+    width: 100%;
+    height: auto;
+        .SectionServicesOne{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            text-align: left;
+        & .SectionServicesOne-h3{
+            color:$color8;
+            font-weight: 100;
+            padding: 0.5rem;
+            margin-top: 3rem;
+            font-size: 16px;
+        }
+        & .SectionServicesOne-info--one{
+            padding: 0.1rem;
+        }
+        & .SectionServicesOne-h4{
+            margin-bottom: 1rem;
+            font-size: 32px;
+            font-weight: bolder;
+        }
+        & .SectionServicesOne-p{
+            margin-bottom: 1rem;
+            font-size: 20px;
+        }
+    }
+
+    .SectionServicesDesign{
+        width: 100%;
+        height: auto;
+        & .SectionDesign{
+            width: 100%;
+            height: auto;
+            border:thin;
+            display: flex;
+            padding: 1rem;
+            flex-direction: row;
+            justify-content: space-between;
+
+            border-style: solid;
+            border-color: #F3D1BF;
+            border-left-width: 0rem;
+            border-right-width: 0rem;
+        }
+    }
+}
