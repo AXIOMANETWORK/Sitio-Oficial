@@ -10,7 +10,7 @@ const Services = () => {
         <h3>SERVICES</h3>
         <p className='text-bold'>Everything You Need</p>
         
-            <div className='Services-iconos'>
+              <div className='Services-iconos'>
 
                 <div className='Services-icon'>          
                     <img src={Icon} alt="" />
@@ -18,12 +18,7 @@ const Services = () => {
                       <h4>Marketing Digital</h4>
                     </div>
                 </div>
-                <div className='Services-icon'>
-                  <img src={Icon3} alt="" />
-                  <div  className='Services-infoIcon'>
-                    <h4>Desarrollo de Software</h4>
-                  </div>
-                </div>
+
                 <div className='Services-icon'>
                     <img src={Icon2} alt="" />
                     <div  className='Services-infoIcon'>
@@ -43,12 +38,7 @@ const Services = () => {
                       
                     </div>
                 </div>
-                <div className='Services-icon'>
-                    <img src={Icon} alt="" />
-                    <div className='Services-infoIcon'>
-                      <h4>Soporte Remoto</h4>  
-                    </div>
-                </div>
+
                 <div className='Services-icon'>
                     <img src={Icon4} alt="" />
                     <div  className='Services-infoIcon'>
