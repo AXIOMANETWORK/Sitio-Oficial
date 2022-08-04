@@ -2,8 +2,12 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+     <h1>Servicios</h1>
+    </>
   )
 }
+
+
 
 export default Services
