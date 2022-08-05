@@ -1,13 +1,16 @@
 import React  from 'react';
 import Phone from '../media/phone.png';
 import { useState } from 'react';
-import Flecha from '../media/flecha.png'
+import Flecha from '../media/flecha.png';
+
 const About2 = () => {
+  
       const [servicio,setServicio] = useState('uno');
       
       const accordion = (e)=>{
             setServicio(e);
       }
+
 
   return (
     <>
