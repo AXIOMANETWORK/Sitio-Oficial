@@ -1,0 +1,18 @@
+[
+    {
+        "id":"0",
+        "name":"Azah Anyeni",
+        "role":"Designer",
+        "img":"../media/team.png"
+    }, {
+        "id":"1",
+        "name":"Noe",
+        "role":"Developer",
+        "img":"../media/team.png"
+    }, {
+        "id":"2",
+        "name":"Xavi",
+        "role":"UX/UI",
+        "img":"../media/team.png"
+    }   
+]

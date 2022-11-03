@@ -19,9 +19,9 @@ const Slider = () => {
             </div>
             <div className='Slider-slide'>
                 <div className='Slider-texto'>
-                    <h3 className='Slider-h3'>Technology</h3>
-                    <p className='text-bold Slider-pTitle'>Management experts of IT Solutions</p>
-                    <p className='text-content Slider-p'>We address the needs of your company through specific business areas to offer a comprehensive solution adapted to each Project.</p>
+                    <h3 className='Slider-h3'>Tecnología & Outsourcing</h3>
+                    <p className='text-bold Slider-pTitle'>Expertos en soluciones TIC para empresas</p>
+                    <p className='text-content Slider-p'>Contamos con 10 años en el mercado ofreciendo soluciones tecnológicas para PYME de diversos sectores: Turismo, Telecomunicaciones, Retail y Viajes entre otras.</p>
                 </div>
                 <div className='Slider-imgPerson'>
                     <img src={SlidePerson} alt="" />    

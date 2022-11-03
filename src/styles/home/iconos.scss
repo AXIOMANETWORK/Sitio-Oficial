@@ -1,49 +1,61 @@
-.iconos{
+.seccionNumeros {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    padding-top: 5rem;
     width: 100%;
-    div{
+    padding-top: 2rem;
+    .text-bold {
+        
+    }
+    .iconos {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1.5rem;
-        
-        .icono{
-            background: #433797;
-            border: 0.1875em ;
-            border-radius: 50%;
-            box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
-            -webkit-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
-            -moz-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
-            height:100px;
-            width: 100px;
+        padding: 1rem;
+        padding-top: 1rem;
+        width: 100%;
+        div {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 1.5rem;
-            &:hover{
-                padding: 1rem;
-            }
-            img{
-                max-width: 100%;
-            }
-        }
-
-        h4{
-            padding-top: 1.5rem;
-            font-size: 30px;
-        }
-        p{
             
+            .icono {
+                background: #433797;
+                border: 0.1875em ;
+                border-radius: 50%;
+                box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                -webkit-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                -moz-box-shadow: -2px -2px 28px -3px rgba(0,0,0,0.47);
+                height:100px;
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.5rem;
+                &:hover {
+                    padding: 1rem;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+    
+            h4 {
+                padding-top: 1.5rem;
+                font-size: 30px;
+            }
+            p {
+                
+            }
         }
+       
     }
-   
 }
+
 .iconos div:nth-child(1){
     .icono{
         background: #433797;
@@ -70,27 +82,32 @@
 
 
 @include breakpoint('medium') {
-    .iconos{
-       flex-direction: row;
-       justify-content: space-evenly;
-       
-        div{
-          
+    .seccionNumeros {
+        .text-bold {}
+
+        .iconos {
+            flex-direction: row;
+            justify-content: space-evenly;
             
-            .icono{
-                
-                img{
-                    
-                }
-            }
-    
-            h4{
-                
-            }
-            p{
-                
-            }
-        }
-       
-    }   
+             div{
+               
+                 
+                 .icono{
+                     
+                     img{
+                         
+                     }
+                 }
+         
+                 h4{
+                     
+                 }
+                 p{
+                     
+                 }
+             }
+            
+         } 
+    }
+     
 }

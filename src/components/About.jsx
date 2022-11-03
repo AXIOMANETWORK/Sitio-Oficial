@@ -7,10 +7,10 @@ const About = () => {
       <section className='about'>
           <div className='about-img'><img src={GrupoImg} alt="" /></div>
           <div className='about-text'>
-              <h3>ABOUT</h3>
-              <p className='text-bold'>We are the Marketing and Technical Support department of your business</p>
+              <h3>ASESORES EN TECNOLOGIAS DE LA INFORMACION</h3>
+              <p className='text-bold'>Abordamos las necesidades de tu empresa a través de áreas específicas para ofrecer una solución integral.</p>
               <p className='text-content'>We know the singularities of each economic sector where we design, propose, manage and execute projects, always respecting the agreed times and with the highest quality. Our goal is to create added value.</p>
-              <a className='btn-dark'>Learn more</a>
+              <a className='btn-dark'>Leer Más</a>
           </div>
           
       </section>

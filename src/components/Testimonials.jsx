@@ -31,9 +31,9 @@ const Testimonials = () => {
     <div className='Testimonials'>
 
         <div className='Testimonials-title'>
-          <h3>Testimonials</h3>
-          <p className='text-bold'>What Our Customers Say</p>
-          <a className='btn-dark'>Contac us</a>
+          <h3>Testimoniales</h3>
+          <p className='text-bold'>¿Qué opinan de nosotros?</p>
+          <a className='btn-dark'>Contáctanos</a>
         </div>
 
         <div className='Testimonials-cards'>

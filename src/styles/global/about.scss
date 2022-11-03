@@ -5,10 +5,11 @@
             width: 100%;
             height: auto;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             margin-bottom: 3rem;
             padding: 1rem;
             & .SectionAboutOne-h3 {
+                width: 100%;
                 color:$color8;
                 font-weight: 100;
                 padding: 0.5rem;
@@ -41,17 +42,17 @@
             background-color: $color7;
             color: $color-withe;
             height: auto;
-            margin-bottom: 3rem;
             text-align: left;
+            display: flex;
+            flex-wrap: wrap;
             .HistoryOne {
-                border: 1px solid #ffff;
                 padding: 1rem;
                 
                 .HistoryOne-h3 {
                     color: $color9;
                     font-weight: 100;
                     font-size: 16px;
-                    margin-bottom: 2rem;
+                    margin: 2rem 0;
                 }
                 .HistoryOne-h4 {
                     font-size: 40px;
@@ -64,11 +65,14 @@
             }
 
             .Historytwo {
-                border: 1px solid #ffff;
+                border: none;
+                border-top: 1px solid #fff;
+                width: 100%;
                 padding: 1rem;
-
-                .Historytwo-h4 {font-size: 40px;
-                    margin-bottom: 2rem;}
+                .Historytwo-h4 {
+                    font-size: 40px;
+                    margin:  2rem 0;
+                }
                 .Historytwo-p {    font-size: 20px;
                     margin-bottom: 2rem;}
             }
@@ -82,17 +86,22 @@
             text-align: left;
             background-color: $color7;
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .OurTeam-title {
                 width: 100%;
+                max-width: 768px;
                 .OurTeam-h3 {
                     color: $color9;
                     font-weight: 100;
                     font-size: 16px;
-                    margin-bottom: 2rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 2rem;
                 }
                 .OurTeam-h4 {
                     font-size: 32px;
-                    margin-bottom: 2rem;
+                    margin-bottom: 3rem;
                 }
             }
 
@@ -100,11 +109,13 @@
                 width: 100%;
                 position: relative;
                 overflow: hidden;
-                
+                max-width: 768px;
                 .container-cards {
                     display: flex;
                     flex-wrap: nowrap;
                     transition: all 0.3s ease-in-out;
+                    width: 100%;
+                    max-width: 768px;
                     .card {
                         flex-grow: 0;
                         flex-shrink: 0;
@@ -155,8 +166,13 @@
             color: $color-withe;
             height: auto;
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
                 .testimonials-title{
                     text-align: center;
+                    width: 100%;
+                    max-width: 768;
                     .testimonials-h3{
                         color: $color9;
                         font-weight: 100;
@@ -173,6 +189,7 @@
                     background-color: #ffff;
                     color: #000;
                     width: 100%;
+                    max-width: 768px;
                     padding: 1rem;
                     margin-bottom: 1rem;
                     .testimonials-stars{
@@ -215,7 +232,8 @@
                 }
 
                 .testimonials-controls{
-                    width: 100%;
+                   
+                    width: 300px;
                     display: flex;
                     justify-content:space-evenly;
                     margin-bottom: 3rem;
@@ -238,7 +256,12 @@
             color: $color-withe;
             height: auto;
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
             .questions-title{
+                width: 100%;
+                max-width: 768px;
                 .questions-h3{
                         color: $color9;
                         font-weight: 100;
@@ -253,9 +276,11 @@
             
             .questions-acordeon{
                 width: 100%;
+                max-width: 768px;
                 margin-bottom: 3rem;
                 .questions-item{
                     width: 100%;
+                    border: 0.5px solid #fff3;
                     .questions-itemTitle{
                         display: flex;
                         justify-content: space-between;
@@ -332,7 +357,6 @@
             height: auto;
             padding: 1rem;
             .partners-logo{
-                width: 50%;
                 padding: 1rem;
                 img{
                     max-width: 100%;
@@ -340,3 +364,46 @@
             }
         }
 }
+
+@include breakpoint('medium-simple') {
+    .About{
+
+        .SectionAboutOne {
+            justify-content: center;
+            
+            & .SectionAboutOne-h3 {
+                width: 80%;
+            }
+
+            & .SectionAboutOne-info--one,.SectionAboutOne-info--two{
+                width: 80%;
+            }
+
+        }
+
+        .History {
+            justify-content: center;
+            .HistoryOne {
+                width: 80%;
+            }
+
+            .Historytwo {
+                width: 80%;
+            }
+            
+        }
+
+      
+    }
+
+}
+@include breakpoint('medium') {
+  
+}
+@include breakpoint('medium-tablet') {
+        
+}
+@include breakpoint('medium-high') {}
+@include breakpoint('large') {}
+@include breakpoint('xlarge') {}
+@include breakpoint('homepage-max') {}
