@@ -1,51 +1,225 @@
 .Services{
     width: 100%;
     height: auto;
-        .SectionServicesOne{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 3rem;
-            padding: 1rem;
+
+    .Section-Servicio{
+        width: 100%;
+        height: auto;
+        & h3{
             text-align: left;
-        & .SectionServicesOne-h3{
-            color:$color8;
-            font-weight: 100;
-            padding: 0.5rem;
-            margin-top: 3rem;
-            font-size: 16px;
+            color: $color8;
         }
-        & .SectionServicesOne-info--one{
-            padding: 0.1rem;
+    }
+    .Section-items{
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+    .Section-itemP{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    } 
+    .Section-P{
+        font-size: 30px;
+        margin-bottom: 3rem;
+    }
+    .Section-P:nth-child(2){
+        font-size: 20px;
+    }
+
+
+    .Services-containerItems {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .Services-item {
+        width: 100%;
+    }
+    .Services-itemTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #F3D1BF;
+        border-bottom:  1px solid #F3D1BF;
+        padding: 0.5rem;
+    }
+    .Services-itemH4 {
+        margin-left: 0.5rem;
+        font-size: 30px;
+        font-weight: normal;
+    }
+    .Services-titleImg {
+        padding: 0.5rem;
+        width: 50px;
+        background-color: #EF6D58;
+        border-radius: 50%;
+        img {
+            width: 100%;
         }
-        & .SectionServicesOne-h4{
-            margin-bottom: 1rem;
-            font-size: 32px;
-            font-weight: bolder;
+    }
+    .Services-itemIcon {
+        display: flex;
+        align-items: center;
+    }
+    .Services-itemArrow {
+        width: 20px;
+        transition: all 0.3s ease-in-out;
+        transform: rotate(-90deg);
+        img {
+            width: 100%;
         }
-        & .SectionServicesOne-p{
-            margin-bottom: 1rem;
-            font-size: 20px;
+    }
+    .Services-itemArrowIsActiva {
+        width: 20px;
+        transition: all 0.3s ease-in-out;
+        transform: rotate(0deg);
+        img {
+            width: 100%;
+        }
+    }
+    
+    .Services-itemInfo {
+        width: 100%;
+        padding: 1rem;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Services-itemP:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .Services-itemP {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    .Services-itemP:nth-child(4) {
+        font-size: 16px;
+    }
+
+    .Services-itemList {
+        width: 100%;
+        padding: 1rem;
+        & p{
+            text-align: left;
         }
     }
 
-    .SectionServicesDesign{
+    .Services-itemSpan {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 16px;
+        p {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .Services-itemimg{
+        display: none;
+        max-width: 100%;
+        & img{
+            width: 70%;
+        }
+    }
+    .Services-Hidden {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .prices-titles{
+        padding: 0.5rem;
+        width: 100%;
+        text-align: left;
+        & h3{
+            font-weight: lighter;
+        }
+        & h4{
+            font-size: 32px;
+            font-weight: lighter;
+        }
+    }
+    .prices-containeritem{
         width: 100%;
         height: auto;
-        & .SectionDesign{
-            width: 100%;
-            height: auto;
-            border:thin;
-            display: flex;
-            padding: 1rem;
-            flex-direction: row;
-            justify-content: space-between;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .prices-item{
+        padding: 2rem;
+        width: 320px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background-color: #fff;
+        border: 1px black solid;
+        border-radius: 5px;
+        box-shadow: 1px 5px 10px -3px rgba(0,0,0,0.75);
+        transition: all 0.3s ease-in-out;
+    }
+    .prices-item:hover {
+        transition: all 0.3s ease-in-out;
+        -webkit-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+    .prices-itemtitle{
+       text-align: left;
+       font-size: 20px;
+        & h4{
+            font-weight: lighter;
+            color: #EF6D58;
+        }
+    }
+    .prices-itemprice{
+        font-size: 30px;
+        & h3{
+            color: #000;
+            font-weight: lighter;
+        }
+    }
+    .Services-itemList{
 
-            border-style: solid;
-            border-color: #F3D1BF;
-            border-left-width: 0rem;
-            border-right-width: 0rem;
+    }
+    .prices-itembtn{
+        & button{
+            padding: 0.5rem;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 1px 5px 10px -5px rgba(0,0,0,0.75);
+        }
+        & button:hover{
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+            background-color: #EF6D58;
+        }
+    }
+
+    @include breakpoint ('medium-high'){
+        .Section-itemP{
+            flex-wrap: nowrap;
+        }
+        .Services-itemimg{
+            display: block;
+        }
+        .prices-containeritem{
+            flex-wrap: wrap;
+            flex-direction: row;
         }
     }
 }
