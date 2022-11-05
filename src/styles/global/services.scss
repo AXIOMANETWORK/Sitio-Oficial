@@ -1,11 +1,12 @@
 .Services{
+    padding: 1rem;
     width: 100%;
     height: auto;
-
     .Section-Servicio{
         width: 100%;
         height: auto;
         & h3{
+            padding: 1rem;
             text-align: left;
             color: $color8;
         }

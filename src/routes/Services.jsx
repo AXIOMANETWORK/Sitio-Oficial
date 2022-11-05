@@ -38,10 +38,8 @@ const Services = () => {
 
   return (
     <>
-
     <Header title="Services" info="Agency provides a full service range including technical skills, design, business understanding." />
-      
-    <div className="Services">
+    <div className='Services'>
         
       <section className='Section-Servicio'>
         <h3>¿Que Hacemos?</h3>
