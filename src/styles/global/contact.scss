@@ -5,15 +5,123 @@
     .section-itemMap{
         width: 100%;
         height: auto;
-        background-color: aqua;
     }
-    .container-itemMap{
-        
-    }
-    .container-map{
-
+    .container-items{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
     .container-form{
-
+        padding: 1rem;
+        max-width: 100%;
+        & .formitem{
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        & h4{
+            align-self:flex-start
+        }
+        & input{
+            width: 100%;
+            padding: 0.5rem;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid #F3D1BF;
+        } 
+        & label{
+            width: 100%;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid #F3D1BF;
+        }
+        & .btnsubmit{
+            width: 50%;
+            background-color: #222C5C;
+            color: #fff;
+            border-radius: 5px;
+        }
     }
+
+    .container-map{
+        width: 100%;
+        height: 420px;
+        background-color: aqua;
+    }
+
+
+    .section-itemsContact{
+        width: 100%;
+        height: auto;
+    }
+    .containers-contact{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-contact{
+        width: 320px;
+        height: 250px;
+        padding: 1rem;
+        height: auto;
+        border:1px solid #F3D1BF;
+        border-radius: 3px;
+        & p{
+            padding: 1rem;
+            font-weight: bold;
+        }
+    }
+    .title-image{
+        padding: 0.5rem;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content:left;
+        & img{
+            padding: 1rem;
+            width: 55px;
+            margin-right: 1rem;
+            background-color: #222C5C;
+            border-radius: 50%;
+        }
+        & h4{
+            color: #145D9B;
+            letter-spacing: 5px;
+        }
+    }
+
+    @include breakpoint ('medium-tablet'){
+        .container-form{
+            padding: 3rem;
+            margin-left: 10%;
+            width: 40%;
+            z-index: 10;
+        }
+        .container-map{
+            position:absolute;
+        }
+    }
+
+    @include breakpoint ('medium-high'){
+        .containers-contact{
+            flex-direction: row;
+        }
+    }
+    
 }

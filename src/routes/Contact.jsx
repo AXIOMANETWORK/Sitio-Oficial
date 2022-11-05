@@ -1,5 +1,8 @@
 import React,{useState} from 'react'
-import Header from '../components/Header'
+import Header from '../components/Header';
+import phone from '../media/Path.png';
+import email from '../media/Email.png';
+import ubi from '../media/Ubi.png';
 
 const Contact = () => {
   return (
@@ -8,10 +11,41 @@ const Contact = () => {
     <div className='Contact'>
       
       <section className='section-itemMap'>
-        <div classname='container-itemMap'>
-          <div className='container-map'>
-          </div>
+        <div className='container-items'>
           <div className='container-form'>
+            <form action="" className='formitem'>
+              <h4>Get In Touch</h4><br />
+              <input type="text" placeholder='YourEmail' /><br />
+              <label>
+                Select
+                <select>
+
+                </select>
+              </label><br />
+              <input type="text" placeholder='Message' /><br />
+              <input type="submit" className='btnsubmit' placeholder='Submit' value='SUBMIT NOW'/>
+            </form>
+          </div>
+          {/* Aqui iria el Mapa*/}
+          <div className='container-map'>
+
+          </div>
+        </div>
+      </section>
+
+      <section className='section-itemsContact'>
+        <div className='containers-contact'>
+          <div className='item-contact'>
+            <div className='title-image'><img src={phone} className='icon-title' /><h4>PHONE</h4></div>
+            <p>+1 (234) 567-89-00</p>
+          </div>
+          <div className='item-contact'>
+            <div className='title-image'><img src={phone} alt="" /><h4>EMAIL</h4></div>
+            <p>info@agency.com</p>
+          </div>
+          <div className='item-contact'>
+            <div className='title-image'><img src={ubi} alt="" /><h4>ADDRESS</h4></div>
+            <p>2247 Lunetta Street, TX 76301</p>
           </div>
         </div>
       </section>
