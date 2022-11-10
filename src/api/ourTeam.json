@@ -1,18 +1,34 @@
 [
     {
-        "id":"0",
-        "name":"Azah Anyeni",
-        "role":"Designer",
-        "img":"../media/team.png"
+        "id":0,
+        "name":"Mónica López",
+        "role":"Directora General",
+        "description":"Ana encontró su pasión por la industria de viajes a los 20 años. A lo largo de los años se ha convertido en una experta en Ventas, Marketing y Revenue Management. Es una ejecutiva internacional bilingüe con más de 15 años de experiencia. Ana ha demostrado una historia de éxito brindando un servicio al cliente de alta calidad y soluciones comerciales innovadoras.",
+        "img":"./images/team.png"
     }, {
-        "id":"1",
-        "name":"Noe",
-        "role":"Developer",
-        "img":"../media/team.png"
+        "id":1,
+        "name":"Agustín Guerrero",
+        "role":"Director de Operaciones",
+        "description":"Encargada de coordinar, liderar y supervisar el trabajo comercial del equipo de ventas.Responsable de capacitaciones, presentaciones y representación de la empresa en eventos segun sea necesario. Asiste en la operación de FAM´s y carga de producto. ",
+        "img":"./images/woman.png"
     }, {
-        "id":"2",
-        "name":"Xavi",
-        "role":"UX/UI",
-        "img":"../media/team.png"
-    }   
+        "id":2,
+        "name":"Carolina Rodriguez",
+        "role":"Directora de Marketing",
+        "description":"Su formación profesional ya con más de 12 años en el turismo dedicados al servicio al cliente, ventas y negociaciones. Enfocada al cumplimiento de metas, crear y mantener relaciones profesionales, ser innovadora y proactiva en su desempeño. Como Director Supply USA en TROTA Tourism se enfoca en la contratación de los proveedores de servicios, atracciones, entretenimiento, entre otros en destinos clave para la empresa y los clientes. Fuera del trabajo es una persona creativa, entusiasta, empática y extrovertida la cual busca siempre poder ayudar a quien lo necesite.",
+        "img":"./images/team.png"
+    },{
+        "id":3,
+        "name":"Sergio",
+        "role":"Diseñador",
+        "description":"Laura tiene más de 10 años de experiencia en Marketing, diseño y merchandising. Le apasiona viajar, conocer cada pequeño deporte de los lugares que visita le encanta conocer la historia e involucrarse en la cultura de cada país. Laura es una persona muy detallista, su estilo de trabajo es acertado y muy creativo.",
+        "img":"./images/woman.png"
+    } ,
+    {
+        "id":4,
+        "name":"Abigail López",
+        "role":"Ejecutiva de ventas",
+        "description":"Administradora de empresas y Ejecutiva de ventas, con experiencia ejecutiva en el sector administrativo como asistente de administración y reservaciones en ventas y marketing, enfocada al desarrollo y la implementación de propuestas útiles en el área de ventas. Hábil y con potencial humanístico.",
+        "img":"./images/team.png"
+    }  
 ]

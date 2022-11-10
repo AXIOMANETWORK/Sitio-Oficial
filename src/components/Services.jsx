@@ -6,7 +6,7 @@ import Icon4 from '../media/icono4.png'
 
 const Services = () => {
   return (
-    <section className='Services'>
+    <section className='Services' id='Services'>
         <h3>Servicios</h3>
         <p className='text-bold Services-p'>Todo lo que necesitas lo tenemos aquí</p>
         

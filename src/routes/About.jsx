@@ -1,8 +1,6 @@
-import React,{useState,useRef} from 'react'
+import React,{useState} from 'react'
 import Header from '../components/Header'
 import WorkProcess from '../components/WorkProcess'
-import person from '../media/team.png'
-import stars from '../media/star.png'
 import arrow from '../media/control-flecha.png'
 import logo1 from '../media/pLogo1.png'
 import logo2 from '../media/pLogo2.png'
@@ -10,21 +8,19 @@ import logo3 from '../media/pLogo3.png'
 import logo4 from '../media/pLogo4.png'
 import logo5 from '../media/pLogo5.png'
 import HelpToBuild from '../components/HelpToBuild'
-import data from '../api/ourTeam.json';
+import OurTeam from '../components/OurTeam'
+import useScreenSize from '../hooks/useScreenSize'
 
 const About = () => {
-
+  const {width} = useScreenSize();
   const [active, setActive] = useState(1);
-  const slideContainer = useRef(null);
 
   const acordeon = (item) =>{
       setActive(item);
   }
 
-  const carrusell = (px) =>{
-      let valor =  -1 * ( px *  slideContainer.current.offsetWidth );
-      slideContainer.current.style.transform = `translate(${valor}px)`;
-  }
+  console.log(width);
+  
 
   return (
     <>
@@ -34,56 +30,24 @@ const About = () => {
         <section className="SectionAboutOne">
           <h3 className="SectionAboutOne-h3">Acerca de nosotros</h3>
           <div className="SectionAboutOne-info--one">
-            
-              <h4 className="SectionAboutOne-h4">Asesores en tecnologías de la información y Marketing Digital.</h4>
-              <div className="SectionAboutOne-p"> Somos una empresa fundada en la ciudad de Puerto Vallarta, Jalisco el 17 de octubre del 2012. Siendo este el primer paso para ayudar a dueños de pequeñas y medianas empresas con la publicidad en un medio de constante crecimiento como lo es la Internet. Para el año 2013 empezaba a ofrecer más servicios como son: diseño y programación de aplicaciones móviles para todo México y Estados Unidos. </div>
-              <div className="SectionAboutOne-p">En el año 2018 cambiamos de nombre a Axioma Network nos renovamos para convertirnos en una empresa de soluciones informáticas integrales ofreciendo servicios como diseño web, soporte técnico remoto y marketing digital. </div> 
-              <div className="SectionAboutOne-p">Sin duda, los logros alcanzados por la empresa rebasan con creces las expectativas de nuestra fundadora y hoy nos encontramos en camino en posicionarnos como una de las mejores empresas tecnológicas para el sector Pyme. </div> 
-              <div className="SectionAboutOne-p">Trabajamos por y para las PYMES y profesionistas independientes. </div> 
+              <div className="SectionAboutOne-parrafo1">
+                <h4 className="SectionAboutOne-h4">Asesores en tecnologías de la información y Marketing Digital.</h4>
+                <p> Somos una empresa fundada en la ciudad de Puerto Vallarta, Jalisco el 17 de octubre del 2012. Siendo este el primer paso para ayudar a dueños de pequeñas y medianas empresas con la publicidad en un medio de constante crecimiento como lo es la Internet. Para el año 2013 empezaba a ofrecer más servicios como son: diseño y programación de aplicaciones móviles para todo México y Estados Unidos.</p>
+              </div>
+              <div className="SectionAboutOne-parrafo2">
+                <div className="SectionAboutOne-p">En el año 2018 cambiamos de nombre a Axioma Network nos renovamos para convertirnos en una empresa de soluciones informáticas integrales ofreciendo servicios como diseño web, soporte técnico remoto y marketing digital. </div> 
+                <div className="SectionAboutOne-p">Sin duda, los logros alcanzados por la empresa rebasan con creces las expectativas de nuestra fundadora y hoy nos encontramos en camino en posicionarnos como una de las mejores empresas tecnológicas para el sector Pyme. </div> 
+                <div className="SectionAboutOne-pBold">Trabajamos por y para las PYMES y profesionistas independientes. </div> 
+              </div>
           </div>          
-          
-                  
-
         </section>
-        <WorkProcess/>
-
-        <section className='OurTeam'>
-          <div className='OurTeam-title'>
-            <h3 className='OurTeam-h3'>Our Team</h3>
-            <h4 className='OurTeam-h4'>Team of Designers<br/> and Developers</h4>
-          </div>
-
-          <div className='OurTeam-Cards'>
-
-            <div className='container-cards' ref={slideContainer}>
-
-                {
-                    data.map(
-                      item =>{
-                        return(
-                            <div className='card' key={item.id}>
-                              <img src={person} alt="" />
-                              <div className='card-info'>
-                                  <h3>{item.name}</h3>
-                                  <h5>{item.role}</h5>
-                              </div>
-                          </div>
-                        )
-                      }
-                    )
-                }
-              
-            </div>
-
-            <div className='control-cards'>
-              <div className="control isActive" onClick={()=>carrusell(0)}></div>
-              <div className="control" onClick={()=>carrusell(1)}></div>
-              <div className="control" onClick={()=>carrusell(2)}></div>
-            </div>
-
-          </div>
-
-        </section>
+        
+        {width > 779 ? <div>"Hola Mundo"</div> : <WorkProcess/>   }
+        
+        
+        
+        <OurTeam/>
+        
         <section className='History'>
             
             <div className='HistoryOne'>
@@ -111,48 +75,7 @@ const About = () => {
 
         </section>
 
-        <section className='testimonials'>
-
-            <div className="testimonials-title">
-
-              <div className="testimonials-h3">Testimonials</div>
-              <div className="testimonials-h4">What Our Clients Saying</div>
-
-            </div>
-
-            <div className="testimonials-container">
-
-                <div className="testimonials-stars"><img src={stars} alt="" /></div>
-
-                <div className="testimonials-text">
-                    A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital 
-                    solutions to promote your product or service online and help you. A digital agency is a business you hire to outsource your digital marketing efforts, 
-                </div>
-
-                <div className='testimonials-item'>
-
-                  <div className="testimonials-img"></div>
-
-                  <div className="testimonials-name">
-
-                    <h5>Alan Martí</h5>
-                    <h6>Meta Inc.</h6>
-
-                  </div>
-
-                </div>
-
-            </div>
-
-            <div className="testimonials-controls">
-                  <div className="control isActive"></div>
-                  <div className="control"></div>
-                  <div className="control"></div>
-                  <div className="control"></div>
-            </div>
-
-        </section>
-
+       
         <section className="questions">
 
             <div className="questions-title">

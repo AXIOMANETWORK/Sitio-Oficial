@@ -1,291 +1,221 @@
-.Slider{
+.Slider {
     width: 100%;
-    background-color: rgb(245, 241, 241);
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    padding: 0 1rem;
     overflow: hidden;
     position: relative;
+}
+.Slider-navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+.Slider-logo {
+    background-image: url('../../media/Isotipo.png');
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;       
+    background-size: contain;
+}
+.Slider-slide {
+    display: flex;
+    width: 300px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.Slider-containerText {
+    display: flex;
+    transition: all 0.9s ease-in-out;
+    //transform: translate(-600px);
+}
+.Slider-texto {
+    width: 300px;
+    //transform: translate(-600px);
+}
+.Slider-pTitle {
+    margin-top: 1rem;
+    font-size: 25px;
+    line-height: 30px;
+}
+.Slider-p {
+    font-size: 16px;
+    margin-top: 1rem;
+    line-height: 25px;
+}
+.Slider-imgPerson{
+    transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    right:-80px;
+    top: 340px;
+    z-index: 2;
+}
+.Slider-figura {
+    position: absolute;
+    top: 0;
+    right:-700px;
     z-index: -1;
-    height: 100vh;
-    padding: 0.5rem;
-    &-navegacion{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+}
+.Slider-cuadricula{
+    position: absolute;
+    left: 120px;
+    top: 350px;
+    z-index: 1;
+    img{
+        width: 200px;
     }
-    &-logo{
-        background-image: url('../../media/Isotipo.png');
-        background-repeat: no-repeat;
-        width: 90px;
-        height: 90px;
-        background-size: contain;
+}
+.Slider-social {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    z-index: 3;
+}
+.Slider-iconSocial {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+@include breakpoint("medium-simple") {
+    .Slider-slide {
+        width: 400px;
     }
-    &-slide{
-        width: 100%;
+    .Slider-texto {
+        width: 400px;
     }
-    
-    &-flechaHeader{
-        position: absolute;
-        left: 20px;
-        top: 350px;
-        z-index:1;
-        img{
-            width: 70px;
-        }
+    .Slider-pTitle {
+        margin-top: 1rem;
+        font-size: 35px;
+        line-height: 55px;
     }
-    &-imgPerson{
-        transform: scaleX(-1);
-        position: absolute;
+    .Slider-p {
+        font-size: 16px;
+        margin-top: 1rem;
+        line-height: 30px;
+    }
+    .Slider-imgPerson{
         right:-80px;
-        top: 300px;
-        z-index: 1;
+        top: 150px;
+    }
+    .Slider-cuadricula{
+        left: 350px;
+        top: 400px;
         img{
-            width: 420px;
+            width: 300px;
         }
     }
+    .Slider-figura {
+        right:-500px;
+    }
+}
 
-    &-social{
-        display: flex;
-        position: absolute;
+@include breakpoint("medium") {
+    .Slider-logo {
+        background-image: url('../../media/newLogo.png');
+        width: 200px;
+        height: 90px;
+    }
+    .Slider-figura {
+        right:-400px;
+    }
+}
+
+@include breakpoint("medium-tablet") {
+    .Slider-slide {
+        width: 600px;
+    }
+   
+    .Slider-texto {
+        width: 600px;
+    }
+    .Slider-h3 {
+        font-size: 20px;
+    }
+    .Slider-pTitle {
+        margin-top: 1rem;
+        font-size: 50px;
+    }
+    .Slider-p {
+        font-size: 20px;
+        margin-top: 1rem;
+    }
+    .Slider-imgPerson{
         right:0px;
-        bottom:0px;
-        z-index: 3;
+        top: 150px;
     }
-    
-
-    &-iconSocial{
-        width: 40px;
-        margin: 3px;
-        img{
-            width: 100%;
-        }
-    }
-
-    &-figura{
-        position: absolute;
-        top: 0;
-        left: 215px;
-        z-index: -2;
-    }
-    &-cuadricula{
-        position: absolute;
-        left: 120px;
-        top: 350px;
-        z-index: -1;
-        img{
-            width: 200px;
-        }
+    .Slider-cuadricula{
+        left: 400px;
     }
 }
 
-
-@include breakpoint('medium-simple') {
-    .Slider{
-        &-slide{
-            padding: 0.5rem;
-        }
-        &-texto{
-            width: 60%;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        &-flechaHeader{
-            left: 100px;
-            top: 350px;
-            img{
-                width: 100px;
-            }
-        }
-        &-imgPerson{
-            right:-90px;
-            top: 150px;
-            img{
-                width: 600px;
-            }
-        }
-        &-figura{
-            top: 0;
-            left: 500px;
-        }
-        &-cuadricula{
-            left: 300px;
-            top: 300px;
-            
-            img{
-                width: 300px;
-            }
+@include breakpoint("medium-high") {
+    .Slider-slide {
+        margin-top: 5rem;
+        width: 650px;
+    }
+  
+    .Slider-texto {
+        width: 650px;
+    }
+    .Slider-h3 {
+        font-size: 25px;
+    }
+    .Slider-pTitle {
+        font-size: 55px;
+    }
+    .Slider-p {
+        font-size: 25px;
+    }
+    .Slider-imgPerson{
+        right:-150px;
+        top: 100px;
+        img {
+            width: 800px;
         }
     }
-}
-
-@include breakpoint('medium') {
-    .Slider{
-        &-logo{
-            background-image: url('../../media/newLogo.png');
-            background-repeat: no-repeat;
-            width: 200px;
-            height: 90px;
-            background-size: contain;
-        }
-        &-texto{
-            height: 300px;
-        }
-        &-flechaHeader{
-            top: 500px;
-        }
-      
-        &-figura{
-            left: 320px;
-        }
-        &-cuadricula{
-            left: 450px;
-            top: 300px;
-            
-        }
+    .Slider-cuadricula{
+        top: 500px;
     }
-}
+} 
 
-@include breakpoint('medium-tablet') {
-    .Slider{
-      
-        &-texto{
-            height: 300px;
-        }
-        &-flechaHeader{
-            top: 500px;
-        }
-      
-        &-figura{
-            left: 320px;
-        }
-        &-cuadricula{
-            left: 530px;
-            top: 300px;
-            
-        }
+@include breakpoint("large") {
+    .Slider-slide {
+       width: 800px;
     }
-}
-
-@include breakpoint('medium-high') {
-    .Slider{
-      
-        &-texto{
-            height: 300px;
-            padding: 2rem;
-        }
-        &-flechaHeader{
-            top: 500px;
-        }
-        &-imgPerson{
-            right:-90px;
-            top: 150px;
-            img{
-                width: 800px;
-            }
-        }
+  
+    .Slider-texto {
+        width: 800px;
+    }
+    .Slider-h3 {
+        font-size: 30px;
+    }
+    .Slider-pTitle {
+        font-size: 65px;
+        line-height: 80px;
+    }
+    .Slider-p {
+        font-size: 30px;
+        line-height: 40px;
+    }
    
-        &-figura{
-            left: 490px;
-        }
-
-        &-cuadricula{
-            left: 600px;
-            top: 300px;
+    .Slider-cuadricula{
+        left: 800px;
+    }
+}
+@include breakpoint("large") {
+    .Slider-imgPerson{
+        right:-150px;
+        top: 100px;
+        img {
+            width: 900px;
         }
     }
 }
-
-@include breakpoint('large') {
-    .Slider{
-      
-        &-texto{
-            width: 50%;
-            height: 400px;
-            padding: 2rem;
-        }
-        &-flechaHeader{
-            top: 600px;
-        }
-   
-        &-figura{
-            left: 490px;
-        }
-
-        &-cuadricula{
-            left: 750px;
-            top: 380px;
-        }
-    }
-}
-
-@include breakpoint('xlarge') {
-    .Slider{
-        
-        &-logo{
-            width: 200px;
-        }
-      
-        &-texto{
-            width: 50%;
-            height: 400px;
-            padding: 2rem;
-        }
-
-        .Slider-h3 {
-            font-size: 40px;
-        }
-        .Slider-p {
-            font-size: 20px;
-        }
-
-        &-flechaHeader{
-            top: 600px;
-        }
-   
-        &-figura{
-            left: 750px;
-        }
-
-        &-cuadricula{
-            left: 750px;
-            top: 380px;
-        }
-    }
-}
-
-@include breakpoint('homepage-max') {
-    .Slider{
-      
-        &-texto{
-            width: 50%;
-            height: 400px;
-            padding: 2rem;
-        }
-
-        .Slider-h3 {
-            font-size: 50px;
-        }
-        .Slider-pTitle{
-            font-size: 80px;
-        }
-
-        .Slider-p {
-            font-size: 25px;
-        }
-
-        &-flechaHeader{
-            top: 600px;
-        }
-   
-        &-figura{
-            left: 1100px;
-        }
-
-        &-cuadricula{
-            left: 750px;
-            top: 380px;
+@include breakpoint("homepage-max") {
+    .Slider-cuadricula{
+        left: 1200px;
+        img {
+            width: 400px;
         }
     }
 }

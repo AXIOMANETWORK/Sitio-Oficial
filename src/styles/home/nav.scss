@@ -1,6 +1,6 @@
-nav{
+nav {
         padding: 1rem;
-    ul{
+    ul {
         display: none;
     }
     .menu{
@@ -16,17 +16,24 @@ nav{
         width: 500px;
         ul{
             display: flex;
-            justify-content:space-between;
             align-items:flex-start;
+            justify-content: flex-end;
             width: 100%;
             li{
                 text-decoration: none;
                 list-style-type: none;
-                
-                a{
+                margin: 0 15px;
+                span {
+                    cursor: pointer;
+                }
+                a {
                     text-decoration: none;
                     color: #ffff;
+                    font-weight: 800;
                     cursor: pointer;
+                }
+                a:hover {
+                    color:#DEA04F;
                 }
             }
         }

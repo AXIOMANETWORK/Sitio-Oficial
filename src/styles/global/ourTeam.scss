@@ -1,0 +1,140 @@
+.OurTeam {
+    width: 100%;
+    color: $color-withe;
+    height: auto;
+    text-align: left;
+    background-color: $color7;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+   
+}
+
+.OurTeam-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OurTeam-title {
+    width: 100%;
+}
+.OurTeam-h3 {
+    color: $color9;
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+.OurTeam-h4 {
+    font-size: 32px;
+    margin-bottom: 3rem;
+    line-height: 30px;
+}
+    
+
+.OurTeam-Cards {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    max-width: 500px;
+  
+}
+
+.OurTeam-containerCards {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 700px;
+}
+
+.OurTeam-card {
+   flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    img {
+        border: 1px solid rgb(58, 60, 86);
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+.OurTeam-img {
+    width: 200px;
+    height: 200px;
+    //background-image: url('../../media/person1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.OurTeam-cardInfo {
+    margin-bottom: 1rem;
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+    h5 {
+    }
+}
+                
+.isActiveCard {
+    transform: translate(-290px);
+}
+        
+.OurTeam-controlCards {
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 3rem;
+ }
+
+.OurTeam-control {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid $color9;
+}
+
+.isActive {
+    background-color:$color9;
+}
+         
+    
+
+
+@include breakpoint('medium-high') {
+    .OurTeam-Cards {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+    }
+
+    .OurTeam-containerCards {
+        display: flex;
+        flex-wrap: nowrap;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .OurTeam-card {
+         flex-shrink: 1;
+         width: 22%;
+         margin: 0 0.5rem ;
+         img {
+             border: 1px solid rgb(58, 60, 86);
+             margin-bottom: 1rem;
+             width: 100%;
+         }
+     }
+     .OurTeam-controlCards {
+        display: none;
+     }
+}
