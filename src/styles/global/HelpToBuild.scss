@@ -42,10 +42,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
     &:hover{
         background-color: #EF6D58;
         color: #fff;
     }
+    :link {
+       
+        text-decoration: none;
+      }
+      :visited {
+       
+        text-decoration: none;
+      }
 }
 
 .HelpToBuild-img{

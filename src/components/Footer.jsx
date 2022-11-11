@@ -13,9 +13,9 @@ const Footer = () => {
           <img src={ logoBlack } alt="" />
         </div>
         <div className='Footer-iconSocial'>
-          <img src={ iconFacebook } alt="" />
-          <img src={ iconTwitter } alt="" />
-          <img src={ iconInstagram } alt="" />
+          <a href='https://www.facebook.com/Axioma.Network/' target="_blank"><img src={iconFacebook} alt="" /></a>
+          <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank"><img src={iconTwitter} alt="" /></a>
+          <a href='https://www.instagram.com/Axioma.Network/' target="_blank"><img src={iconInstagram} alt="" /></a>
         </div>
       </div>
 

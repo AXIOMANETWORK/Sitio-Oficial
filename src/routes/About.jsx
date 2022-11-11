@@ -42,11 +42,15 @@ const About = () => {
           </div>          
         </section>
         
-        {width > 779 ? <div>"Hola Mundo"</div> : <WorkProcess/>   }
+         <WorkProcess/>   
         
         
         
-        <OurTeam/>
+        {
+          /*
+              <OurTeam/>
+           */
+        }
         
         <section className='History'>
             

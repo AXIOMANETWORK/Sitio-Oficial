@@ -1,6 +1,7 @@
 .Services{
     padding: 1rem;
     width: 100%;
+    max-width: 1280px;
     height: auto;
     .Section-Servicio{
         width: 100%;
@@ -47,6 +48,7 @@
         border-top: 1px solid #F3D1BF;
         border-bottom:  1px solid #F3D1BF;
         padding: 0.5rem;
+        cursor: pointer;
     }
     .Services-itemH4 {
         margin-left: 0.5rem;
@@ -162,8 +164,10 @@
     }
     .prices-item{
         padding: 2rem;
-        width: 320px;
-        height: 550px;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -197,12 +201,14 @@
 
     }
     .prices-itembtn{
+        
         & button{
             padding: 0.5rem;
             border-radius: 3px;
             background-color: #fff;
             transition: all 0.3s ease-in-out;
             box-shadow: 1px 5px 10px -5px rgba(0,0,0,0.75);
+            cursor: pointer;
         }
         & button:hover{
             color: #fff;
@@ -221,6 +227,9 @@
         .prices-containeritem{
             flex-wrap: wrap;
             flex-direction: row;
+        }
+        .prices-item{
+            height: 550px;
         }
     }
 }

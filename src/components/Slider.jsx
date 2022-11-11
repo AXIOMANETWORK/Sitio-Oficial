@@ -39,9 +39,9 @@ const Slider = () => {
                 <img src={SlidePerson} alt="" />    
             </div>
             <div className='Slider-social'>
-                <div className="Slider-iconSocial"><img src={iconFacebook} alt="" /></div>
-                <div className="Slider-iconSocial"><img src={iconTwitter} alt="" /></div>
-                <div className="Slider-iconSocial"><img src={iconInstagram} alt="" /></div>
+            <a href='https://www.facebook.com/Axioma.Network/' target="_blank"><div className="Slider-iconSocial"><img src={iconFacebook} alt="" /></div></a>
+            <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank"><div className="Slider-iconSocial"><img src={iconTwitter} alt="" /></div></a>
+            <a href='https://www.instagram.com/Axioma.Network/' target="_blank"><div className="Slider-iconSocial"><img src={iconInstagram} alt="" /></div></a>
             </div>
             <div className='Slider-cuadricula'><img src={Cuadricula} alt="" /></div>
             <div className='Slider-figura'><img src={Rectangle} alt="" /></div>

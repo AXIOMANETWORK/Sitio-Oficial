@@ -12,6 +12,7 @@ import design from '../media/design-caracteristicas.jpg'
 import desarrollo from '../media/desarrollo-caracteristicas.jpg'
 import marketing from '../media/marketing-caracteristicas.png'
 import it from '../media/it-caracteristicas.jpg'
+import HelpToBuild from '../components/HelpToBuild'
 
 
 const Services = () => {
@@ -38,7 +39,7 @@ const Services = () => {
 
   return (
     <>
-    <Header title="Services" info="Agency provides a full service range including technical skills, design, business understanding." />
+    <Header title="Conce acerca de nuestros servicios" info="Todo lo que necesitas lo tenemos aquí." />
     <div className='Services'>
         
       <section className='Section-Servicio'>
@@ -280,6 +281,7 @@ const Services = () => {
           </div>
 
       </section>
+      <HelpToBuild/>
     </div>
     </>
   )

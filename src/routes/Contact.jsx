@@ -16,13 +16,8 @@ const Contact = () => {
             <form action="" className='formitem'>
               <h4>Get In Touch</h4><br />
               <input type="text" placeholder='YourEmail' /><br />
-              <label>
-                Select
-                <select>
-
-                </select>
-              </label><br />
-              <input type="text" placeholder='Message' /><br />
+              <input type="text" placeholder='Subject' /><br />
+              <input type="textArea" placeholder='Message' /><br />
               <input type="submit" className='btnsubmit' placeholder='Submit' value='SUBMIT NOW'/>
             </form>
           </div>
@@ -37,15 +32,15 @@ const Contact = () => {
         <div className='containers-contact'>
           <div className='item-contact'>
             <div className='title-image'><img src={phone} className='icon-title' /><h4>PHONE</h4></div>
-            <p>+1 (234) 567-89-00</p>
+            <p>+52 322 263 4115</p>
           </div>
           <div className='item-contact'>
             <div className='title-image'><img src={phone} alt="" /><h4>EMAIL</h4></div>
-            <p>info@agency.com</p>
+            <p>info@axioma.network</p>
           </div>
           <div className='item-contact'>
             <div className='title-image'><img src={ubi} alt="" /><h4>ADDRESS</h4></div>
-            <p>2247 Lunetta Street, TX 76301</p>
+            <p>VILLAS RIO EDIF.1C DEP.7,Puerto Vallarta,Jal.</p>
           </div>
         </div>
       </section>
