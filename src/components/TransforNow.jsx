@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const TransforNow = () => {
   return (
@@ -8,7 +9,7 @@ const TransforNow = () => {
             <p className="text-content">Conversemos sobre tus estrategias y retos tecnológicos Llena el formulario y cuéntanos más de ti en breve te contaremos mucho de nosotros</p>
         </div>
         <div>
-        <a className='btn-yellow'>Contáctanos</a>
+        <NavLink to='/contact' className='btn-yellow'>Contáctanos</NavLink>
         </div>
     </div>
   )

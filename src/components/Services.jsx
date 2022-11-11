@@ -3,6 +3,7 @@ import Icon from '../media/icono1.png'
 import Icon2 from '../media/icono2.png'
 import Icon3 from '../media/icono3.png'
 import Icon4 from '../media/icono4.png'
+import { NavLink } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -49,7 +50,7 @@ const Services = () => {
                 </div>
 
             </div>
-            <a className='btn-dark'>Leer Más</a>
+            <NavLink to='/services' className='btn-dark'>Leer Más</NavLink>
     </section>
   )
 }

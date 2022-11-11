@@ -7,7 +7,7 @@ import ubi from '../media/Ubi.png';
 const Contact = () => {
   return (
     <>
-    <Header title="Contact" info="Agency provides a full service range including technical skills, design, business understanding." />
+    <Header title="Contáctanos" info="Conversemos sobre tus estrategias y retos tecnológicos Llena el formulario y cuéntanos más de ti en breve te contaremos mucho de nosotros" />
     <div className='Contact'>
       
       <section className='section-itemMap'>

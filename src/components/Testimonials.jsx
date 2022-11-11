@@ -4,6 +4,7 @@ import person from '../media/person2.png';
 //import cuadricula from '../media/cuadricula.png'
 import datos from '../api/testimonials.json';
 import oval from '../media/OvalBig.png';
+import { NavLink } from 'react-router-dom';
 
 const Testimonials = () => {
   const slideContainer = useRef(null);
@@ -33,7 +34,7 @@ const Testimonials = () => {
         <div className='Testimonials-title'>
           <h3>Testimoniales</h3>
           <p className='text-bold'>¿Qué opinan de nosotros?</p>
-          <a className='btn-dark'>Contáctanos</a>
+          <NavLink to='/contact' className='btn-dark'>Contáctanos</NavLink>
         </div>
 
         <div className='Testimonials-cards'>

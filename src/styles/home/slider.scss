@@ -1,9 +1,9 @@
 .Slider {
     width: 100%;
     height: 100vh;
-    padding: 0 1rem;
     overflow: hidden;
     position: relative;
+    padding: 0 1rem;
 }
 .Slider-navegacion {
     display: flex;
@@ -16,20 +16,38 @@
     height: 90px;       
     background-size: contain;
 }
-.Slider-slide {
+.Slider-container {
     display: flex;
-    width: 300px;
+    width: 100%;
     margin-top: 1rem;
-    overflow: hidden;
+    position: relative;
 }
-.Slider-containerText {
+.Slider-slides {
     display: flex;
-    transition: all 0.9s ease-in-out;
-    //transform: translate(-600px);
+    list-style: none;
+    width: 100%;
+    overflow:hidden;
 }
-.Slider-texto {
-    width: 300px;
-    //transform: translate(-600px);
+.Slider-slide{
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    animation-name: slide;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes slide {
+	0% { transform: translateX(0); }
+	30% { transform: translateX(0); }
+
+	35% { transform: translateX(-100%); }
+	65% { transform: translateX(-100%); }
+
+	70% { transform: translateX(-200%); }
+	100% { transform: translateX(-200%); }
 }
 .Slider-pTitle {
     margin-top: 1rem;
@@ -77,12 +95,10 @@
 }
 
 @include breakpoint("medium-simple") {
-    .Slider-slide {
-        width: 400px;
+    .Slider-container {
+        width: 60%;
     }
-    .Slider-texto {
-        width: 400px;
-    }
+
     .Slider-pTitle {
         margin-top: 1rem;
         font-size: 35px;
@@ -121,13 +137,9 @@
 }
 
 @include breakpoint("medium-tablet") {
-    .Slider-slide {
-        width: 600px;
-    }
+ 
    
-    .Slider-texto {
-        width: 600px;
-    }
+   
     .Slider-h3 {
         font-size: 20px;
     }
@@ -149,14 +161,9 @@
 }
 
 @include breakpoint("medium-high") {
-    .Slider-slide {
-        margin-top: 5rem;
-        width: 650px;
-    }
+   
   
-    .Slider-texto {
-        width: 650px;
-    }
+  
     .Slider-h3 {
         font-size: 25px;
     }
@@ -179,13 +186,9 @@
 } 
 
 @include breakpoint("large") {
-    .Slider-slide {
-       width: 800px;
-    }
   
-    .Slider-texto {
-        width: 800px;
-    }
+  
+  
     .Slider-h3 {
         font-size: 30px;
     }

@@ -8,9 +8,9 @@ function Nav() {
         <nav className='Slider-nav'>
             <ul>
                 <li><NavLink to='/'>Home</NavLink></li>
-                <li><span><Link to="About" spy={true} smooth={true} offset={50} duration={500}>About</Link></span></li>
-                <li><Link to="Services" spy={true} smooth={true} offset={50} duration={500}>Services</Link></li>
-                <li><Link>Contact</Link></li>
+                <li><NavLink to='/about'>Nosotros</NavLink></li>
+                <li><NavLink to='/services'>Servicios</NavLink></li>
+                <li><NavLink to='/contact'>Contacto</NavLink></li>
             </ul>
             <div className='menu'><img src={Menu} alt="" /></div>
         </nav>
