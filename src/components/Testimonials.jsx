@@ -1,6 +1,5 @@
 import React, { useState,useRef } from 'react';
 //import customers from '../media/customers.png'
-import person from '../media/person2.png';
 //import cuadricula from '../media/cuadricula.png'
 import datos from '../api/testimonials.json';
 import oval from '../media/OvalBig.png';
@@ -45,7 +44,7 @@ const Testimonials = () => {
                     return (
                     <div className="Testimonials-cardInfo" key={item.id} >
                     
-                      <div className='Testimonials-cardImg' style={{backgroundImage:`url(${person})`}}></div>
+                      <div className='Testimonials-cardImg' style={{backgroundImage:`url(${item.img})`}}></div>
                       <div>
                         <h4>{item.name}</h4>
                         <p>{item.company}</p>

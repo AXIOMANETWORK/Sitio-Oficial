@@ -10,16 +10,16 @@
     justify-content: space-between;
 }
 .Slider-logo {
-    background-image: url('../../media/Isotipo.png');
+    background-image: url('../../media/logo-axioma-network.png');
     background-repeat: no-repeat;
-    width: 90px;
-    height: 90px;       
+    width: 400px;
+    height: 115px;       
     background-size: contain;
 }
 .Slider-container {
     display: flex;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 5rem;
     position: relative;
 }
 .Slider-slides {
@@ -127,9 +127,9 @@
 
 @include breakpoint("medium") {
     .Slider-logo {
-        background-image: url('../../media/newLogo.png');
-        width: 200px;
-        height: 90px;
+        background-image: url('../../media/logo-axioma-network.png');
+        width: 400px;
+        height: 115px;
     }
     .Slider-figura {
         right:-400px;
