@@ -1,17 +1,15 @@
-import React,{useState} from 'react'
+import React, { useState, useEffect } from 'react'
 
 const ScrollToUp = () => {
-    const [isActive,setIsActive] = useState(false);
-    
-    window.addEventListener('scroll',() =>{
-        const scroll = document.documentElement.scrollTop;
-        if(scroll > 300){
-            setIsActive(true);
-        }else{
-            setIsActive(false)
-        }
-        
-    })
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsActive(document.documentElement.scrollTop > 300);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
 
     const scrollToTop = () =>{
         window.scrollTo({

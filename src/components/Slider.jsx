@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Nav from './Nav';
 import SlidePerson from '../media/personDesktop.png';
 import Rectangle from '../media/Rectangle.png';
@@ -39,9 +39,9 @@ const Slider = () => {
                 <img src={SlidePerson} alt="" />    
             </div>
             <div className='Slider-social'>
-            <a href='https://www.facebook.com/Axioma.Network/' target="_blank"><div className="Slider-iconSocial"><img src={iconFacebook} alt="" /></div></a>
-            <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank"><div className="Slider-iconSocial"><img src={iconTwitter} alt="" /></div></a>
-            <a href='https://www.instagram.com/Axioma.Network/' target="_blank"><div className="Slider-iconSocial"><img src={iconInstagram} alt="" /></div></a>
+            <a href='https://www.facebook.com/Axioma.Network/' target="_blank" rel="noopener noreferrer"><div className="Slider-iconSocial"><img src={iconFacebook} alt="" /></div></a>
+            <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank" rel="noopener noreferrer"><div className="Slider-iconSocial"><img src={iconTwitter} alt="" /></div></a>
+            <a href='https://www.instagram.com/Axioma.Network/' target="_blank" rel="noopener noreferrer"><div className="Slider-iconSocial"><img src={iconInstagram} alt="" /></div></a>
             </div>
             <div className='Slider-cuadricula'><img src={Cuadricula} alt="" /></div>
             <div className='Slider-figura'><img src={Rectangle} alt="" /></div>

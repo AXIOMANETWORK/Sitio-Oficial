@@ -12,20 +12,19 @@ import GridLoader from 'react-spinners/GridLoader'
 
 
 function App() {
-  const [loanding,setLoandig] = useState(false);
-  
-  useEffect( () => {
-    setLoandig(true);
-    setTimeout( () =>{
-      setLoandig(false);
-    }, 2000 )
+  const [loading, setLoading] = useState(false);
 
-  },[])
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  }, [])
 
   return (
     <div className="App">
       {
-        loanding ? 
+        loading ?
         <div className='Snipper'>
           <GridLoader color={"rgba(241,165,1)"} size={50} />
         </div>
@@ -34,9 +33,9 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route path="/about" element={ <About/> }/>
-          <Route path="portafolio" element={ <Portafolio/> }/>
+          <Route path="/portafolio" element={ <Portafolio/> }/>
           <Route path="/services" element={ <Services/> }/>
-          <Route path="workMedia" element={ <WorkMedia/> }/>
+          <Route path="/workMedia" element={ <WorkMedia/> }/>
           <Route path="/contact" element={ <Contact/> }/>
           <Route path="/" element={ <Home/> } exact />
         </Routes>

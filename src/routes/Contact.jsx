@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Header from '../components/Header';
 import phone from '../media/Path.png';
 import email from '../media/Email.png';

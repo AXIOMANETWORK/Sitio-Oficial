@@ -4,12 +4,11 @@ const useScreenSize = () => {
 
     const [width,setWidth] = useState(window.innerWidth);
 
-    useEffect( ()=> {
-         window.addEventListener("resize",handleResinze);
-         return () => {
-            window.addEventListener("resize",handleResinze);
-         };
-
+    useEffect(() => {
+        window.addEventListener("resize", handleResinze);
+        return () => {
+            window.removeEventListener("resize", handleResinze);
+        };
     }, [])
     
     const handleResinze = () => {

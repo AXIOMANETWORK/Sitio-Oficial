@@ -1,7 +1,6 @@
 import React from 'react'
 import Menu from '../media/menu.png'
 import { NavLink } from 'react-router-dom';
-import {Link} from 'react-scroll';
 function Nav() {
   return (
     <>

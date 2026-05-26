@@ -8,7 +8,6 @@ const OurTeam = () => {
 
   const carrusell = (position) =>{
       let valor =  -1 * ( position *  slideContainer.current.offsetWidth);
-      console.log(valor);
       slideContainer.current.style.transform = `translate(${valor}px)`;
       setControl(position)
   }

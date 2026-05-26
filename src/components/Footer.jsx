@@ -13,15 +13,15 @@ const Footer = () => {
           <img src={ logoBlack } alt="" />
         </div>
         <div className='Footer-iconSocial'>
-          <a href='https://www.facebook.com/Axioma.Network/' target="_blank"><img src={iconFacebook} alt="" /></a>
-          <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank"><img src={iconTwitter} alt="" /></a>
-          <a href='https://www.instagram.com/Axioma.Network/' target="_blank"><img src={iconInstagram} alt="" /></a>
+          <a href='https://www.facebook.com/Axioma.Network/' target="_blank" rel="noopener noreferrer"><img src={iconFacebook} alt="" /></a>
+          <a href='https://mobile.twitter.com/axiomanetworkmx' target="_blank" rel="noopener noreferrer"><img src={iconTwitter} alt="" /></a>
+          <a href='https://www.instagram.com/Axioma.Network/' target="_blank" rel="noopener noreferrer"><img src={iconInstagram} alt="" /></a>
         </div>
       </div>
 
       <div className='Footer-text'>
         <div>
-          <p>Copyright © 2022. All Rights Reserved.</p>
+          <p>Copyright © {new Date().getFullYear()}. All Rights Reserved.</p>
         </div>
         <div>
           <p>Terms of Conditions &nbsp; &nbsp; &nbsp; Privacy Policy</p>
